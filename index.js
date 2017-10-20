@@ -45,7 +45,7 @@ module.exports = {
     permanentRedirect: build(HttpStatus.PERMANENT_REDIRECT), // 308
     preconditionFailed: build(HttpStatus.PRECONDITION_FAILED), // 412
     preconditionRequired: build(HttpStatus.PRECONDITION_REQUIRED), // 428
-    processing: build(HttpStatus.PROCESSING), // 101
+    processing: build(HttpStatus.PROCESSING), // 102
     proxyAuthenticationRequired: build(HttpStatus.PROXY_AUTHENTICATION_REQUIRED), // 407
     requestHeaderFieldsTooLarge: build(HttpStatus.REQUEST_HEADER_FIELDS_TOO_LARGE), // 431
     requestTimeout: build(HttpStatus.REQUEST_TIMEOUT), // 408
