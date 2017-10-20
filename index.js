@@ -2,8 +2,10 @@ const HttpStatus = require('http-status-codes');
 
 const build = status => {
     return (ctx, message) => {
+        ctc = ctx || {}
         ctx.status = status
         ctx.body = message || {message: HttpStatus.getStatusText(status)}
+        return ctx
     }
 }
 

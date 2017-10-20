@@ -17,8 +17,7 @@ const ctx = {};
 const person = new Person();
 let john = person.findOne(1);
 if (john !== undefined) {
-    ctx.body = john.json();
-    ok(ctx)
+    ok(ctx, john.json())
 } else {
     notFound(ctx);
 }
