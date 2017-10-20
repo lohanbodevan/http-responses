@@ -15,10 +15,18 @@ const {ok, notFound} = require('http-responses');
 
 const person = new Person();
 let john = person.findOne(1);
-const ctx = (john !== undefined) ? ok({}, john.json()) : notFound();
+const response = (john !== undefined) ? ok({}, john.json()) : notFound();
 ```
 
-Then HTTP response status code will setted to `404` with body:
+If John exists, the result will be as following with status code `200`:
+```json
+{
+    "name": "John",
+    "occupation": "singer",
+}
+```
+
+Otherwise the HTTP response status code will setted to `404` with body:
 ```json
 {
     "message": "Not Found"
