@@ -34,7 +34,7 @@ Then HTTP response status code will setted to `404` with body:
 ## Implemented Status Code
 | Function | Status Code | Default Message |
 |:---------|------------|--------------|
-| accepted | 202 | { message: 'Accepted' } |
+| accepted | 202 | ```json { message: 'Accepted' } ```|
 | badGateway | 502 | { message: 'Bad Gateway' } |
 | badRequest | 400 | { message: 'Bad Request' } |
 | conflict | 409 | { message: 'Conflict' } |
