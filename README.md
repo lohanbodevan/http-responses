@@ -13,15 +13,9 @@ npm install git+https://github.com/lohanbodevan/http-responses.git
 ```javascript
 const {ok, notFound} = require('http-responses');
 
-const ctx = {};
-
 const person = new Person();
 let john = person.findOne(1);
-if (john !== undefined) {
-    ok(ctx, john.json())
-} else {
-    notFound(ctx);
-}
+const ctx = (john !== undefined) ? ok({}, john.json()) : notFound();
 ```
 
 Then HTTP response status code will setted to `404` with body:
