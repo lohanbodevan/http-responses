@@ -4,12 +4,12 @@ Don't spend time writing personalized response body for non-success requests.
 
 ## How to use?
 1. Install lib
-```
+```bash
 npm install git+https://github.com/lohanbodevan/http-responses.git
 ```
 
 2. Use it
-```
+```javascript
 const {ok, notFound} = require('http-responses');
 
 const ctx = {};
@@ -25,7 +25,7 @@ if (john !== undefined) {
 ```
 
 Then HTTP response status code will setted to `404` with body:
-```
+```json
 {
     "message": "Not Found"
 }
@@ -90,6 +90,6 @@ Then HTTP response status code will setted to `404` with body:
 | useProxy | 305 | { message: 'Use Proxy' } |
 
 ## Tests
-```
+```bash
 npm test
 ```
