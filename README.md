@@ -15,7 +15,7 @@ const {ok, notFound} = require('http-responses');
 
 const person = new Person();
 let john = person.findOne(1);
-const response = (john !== undefined) ? ok({}, john.json()) : notFound();
+const ctx = (john !== undefined) ? ok({}, john.json()) : notFound({});
 ```
 
 If John exists, the result will be as following with status code `200`:
